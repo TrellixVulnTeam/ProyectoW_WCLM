@@ -1,0 +1,24 @@
+
+        <form {{action 'save' on='submit'}}>
+        <h3>Evento - {{evento.nombre}}</h3>
+        Nombre
+        {{input type="text" class="form-control" value=evento.nombre}}<br><br>
+
+        Inicio
+        {{input type="date" class="form-control" value=evento.inicio}}<br><br>
+
+        Fin
+        {{input type="date" class="form-control" value=evento.fin}}<br><br>
+
+        <hr>
+        <h3>Actividades</h3>
+                <div class="actividadesLista"><br>
+                        {{#each evento.actividades as |act|}}
+                                {{form-actividad activi=act}}
+                        {{/each}}
+                        <br>
+                </div>
+                <button class="form-control btn btn-primary float-right" type="button" {{action 'saveActividad'}}><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar Actividad</button><br><br><br>
+        <hr>
+        <button  class="form-control btn btn-success" >Guardar</button>
+        </form>

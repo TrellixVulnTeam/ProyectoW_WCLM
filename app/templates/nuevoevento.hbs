@@ -1,0 +1,14 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css">
+{{outlet}}
+<h2><i class="fa fa-calendar-o" aria-hidden="true"></i> - Crear Evento</h2><br><br>
+<div class="row">
+    <div class="col col-md-2 col-sm-12">
+        <center><img class="rounded-circle" src="http://via.placeholder.com/100x100"><br></center>
+    </div>
+    <div class="col col-md-10 col-sm-12">
+        {{!-- {{#form-evento}}{{/form-evento}} --}}
+        {{form-evento evento=model didSave=(action 'irLista')}}
+    </div>
+
+</div>

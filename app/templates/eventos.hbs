@@ -3,13 +3,13 @@
 <br>
 <div class="row">
 {{#each model as |evento|}}
-<div class="col col-sm-4" style="margin-top:10px;">
-    <div class="card" style="width: 20rem;" >
+<div class="col col-lg-4 col-md-6 col-sm-12" style="margin-top:10px;">
+    <div class="card" style="width: 100%;" >
     <img class="card-img-top" src="http://via.placeholder.com/380x180" alt="Card image cap">
     <div class="card-body">
         <h4 class="card-title">{{evento.nombre}}</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        {{#link-to 'perfilevento' evento.id}}<button type="button" class="btn btn-primary"><i class="fa fa-calendar-o" aria-hidden="true"></i> Ver Evento</button>{{/link-to}}
+        <sup><b>{{evento.actividades.length}}</b> Actividades || <b>Inicio</b> <i>{{evento.inicio}}</i> <b>Fin</b> <i>{{evento.fin}}</i></sup>
+<br><br>        {{#link-to 'perfilevento' evento.id}}<button style="cursor:pointer" type="button" class="btn btn-primary"><i class="fa fa-calendar-o" aria-hidden="true"></i> Ver Evento</button>{{/link-to}}
     </div>
     </div>
 </div>

@@ -1,3 +1,5 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css">
 {{outlet}}
 <h2>Perfil del Evento</h2>
 <br>
@@ -6,10 +8,10 @@
         <img class="rounded-circle" src="http://via.placeholder.com/100x100"></center>
     </div>
     <div class="col col-sm 10">
-        <h3><i class="fa fa-calendar-o" aria-hidden="true"></i> - {{model.nombre}}</h3>
-        <br>
-        <b>Descripción</b><br><br>
-            <button type="button" class="btn btn-success" ><i class="fa fa-check" aria-hidden="true"></i> Asistir</button>
-            <button type="button" class="btn btn-danger" {{action 'borrar'}}><i class="fa fa-trash" aria-hidden="true"></i> Borrar</button>
+       
+
+         {{form-evento evento=model didSave=(action 'irLista')}}<br>
+        <button type="button" class="form-control btn btn-danger" {{action 'borrar' }}><i class="fa fa-trash" aria-hidden="true"></i> Borrar</button>
+    <br><br><br>
     </div>
 </div>
