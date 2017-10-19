@@ -10,7 +10,8 @@ export default Ember.Route.extend({
             persona: this.store.createRecord('persona'),
             actividades: this.store.query('actividad',{ 
                 orderBy: 'evento', equalTo: params.idEvento
-            })
+            }),
+            evento: this.store.find('event',params.idEvento)
         };
     }
 });

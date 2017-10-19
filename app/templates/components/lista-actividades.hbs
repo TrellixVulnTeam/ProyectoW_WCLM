@@ -1,5 +1,5 @@
 <div class="panel-group">
     {{#each lista as |actividad|}}
-        {{actividad-item item=actividad}}
+        {{actividad-item item=actividad registrarActividad=(action 'registrarActividad')}}
     {{/each}}
 </div>

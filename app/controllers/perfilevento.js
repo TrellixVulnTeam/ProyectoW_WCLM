@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
                 'success'
                 ).then(()=>{
                     swal.close();
-                    this.sendAction('didSave');
+                    this.transitionToRoute('eventos')
                 })
         },
 

@@ -3,10 +3,10 @@
 <h2>Lista de Eventos</h2>
 <br>
 <div class="row">
-{{#each model as |evento|}}
+{{#each model.evento as |evento|}}
 <div class="col col-lg-4 col-md-6 col-sm-12" style="margin-top:10px;">
     <div class="card" style="width: 100%;" >
-    <img class="card-img-top" src="http://via.placeholder.com/380x180" alt="Card image cap">
+    <img class="card-img-top" src="assets/img/sections/bruno-abatti.jpg" alt="Card image cap">
     <div class="card-body">
         <h4 class="card-title">{{evento.nombre}}</h4>
         <sup><b>{{evento.actividades.length}}</b> Actividades || <b>Inicio</b> <i>{{evento.inicio}}</i> <b>Fin</b> <i>{{evento.fin}}</i></sup><br>

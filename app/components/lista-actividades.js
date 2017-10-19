@@ -10,5 +10,10 @@ export default Ember.Component.extend({
             toggle: false
         });
 
+    },
+    actions:{
+        registrarActividad(actividad, checked){
+            this.sendAction('registrarActividad', actividad, checked)
+        }
     }
 });
