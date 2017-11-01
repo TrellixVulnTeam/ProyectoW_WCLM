@@ -32,7 +32,7 @@ export default Ember.Controller.extend({
                 ticketEvento.get('actividades').removeObject(actividad);
             }
         },
-        save(){
+        save(){ 
             let modelPersona = this.get('model').persona;
             //VALIDAR CAMPOS
             if(Ember.isBlank(modelPersona.get('nombre'))){

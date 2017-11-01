@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     model(){
         return {
             evento: this.store.findAll('event'),
+            
         }
     },
     //afterModel(){},
