@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('perfilevento', {path: 'perfilevento/:idEvento'});
   this.route('nuevoevento');
   this.route('registro', {path: 'registro/:idEvento'});
+  this.route('login');
 });
 
 export default Router;
