@@ -26,6 +26,11 @@
     </div>
 </nav>
 <br>
+<div id="notifications">
+    {{#each notifications as |msg|}}
+        <div class="alert alert-danger alert-with-icon" data-notify="container"> <div class="container"> <div class="alert-wrapper"> <button type="button" class="close" {{action 'eraseNotification' msg bubbles=false}} aria-label="Close"> <i class="nc-icon nc-simple-remove"></i></button><div class="message"><i class="nc-icon nc-bell-55"></i> {{msg}}</div></div></div></div>
+    {{/each}}
+</div>
 <div id="main" class="container" >
     {{#if session.isAuthenticated}}
         <button  {{action 'salir'}} class="btn btn-danger btn-block btn-round">Cerrar sesion</button>
