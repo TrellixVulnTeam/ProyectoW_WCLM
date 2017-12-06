@@ -4,14 +4,16 @@
             <h3 class="card-title">Iniciar Sesión</h3>
             <form class="register-form">
                 <label>Email</label>
-                <input type="email" class="form-control no-border" placeholder="Email">
+                {{input type="email" class="form-control no-border" placeholder="Email"}}
 
                 <label>Password</label>
-                <input type="password" class="form-control no-border" placeholder="Password">
-                <button  {{action 'signIn' 'facebook'}} class="btn btn-danger btn-block btn-round">Iniciar Sesión</button>
+                {{input type="password" class="form-control no-border" placeholder="Password"}}
+                <button  {{action 'signIn' 'email'}} class="btn btn-danger btn-block btn-round">Iniciar Sesión</button>
+                <button  {{action 'signIn' 'facebook'}} class="btn btn-primary btn-block btn-round">Facebook</button>
             </form>
             <div class="forgot">
-                <a href="#paper-kit" class="btn btn-link btn-danger">Forgot password?</a>
+
+                <a hef="#paper-kit" class="btn btn-link btn-danger">Forgot password?</a>
             </div>
         </div>
     </div>

@@ -1,0 +1,13 @@
+{{outlet}}
+<h1>Perfil</h1> 
+<form {{action 'save' on='submit'}}>
+    <div>
+        <label for="nombreUsuario">Tu nombre</label>
+        {{input class="form-control" value=model.nombre}}
+    </div>
+    <div>
+        <label for="">Foto de Perfil</label>
+        {{profile-pic-picker initicalImg=model.picUrl didChanged=(action 'changePicUrl')}} <br>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </div>
+</form>

@@ -22,6 +22,11 @@ export default Ember.Controller.extend({
                         }
                     });
                     break;
+                case 'email':
+                    this.get('session').open('firebase',{provider:'password', email: this.get('email'), password: this.get('password')}).then(()=>{
+                        return this.transitionToRoute('eventos');
+                    });
+                    break;
             }
         }
     }
